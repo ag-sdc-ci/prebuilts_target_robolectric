@@ -1,0 +1,146 @@
+// Auto-generated prebuilt Blueprint for external/robolectric
+// Extracted from Extractive APEX package: org.blisslabs.ag.ext.robolectric
+
+package {
+    default_visibility: ["//visibility:public"],
+    default_applicable_licenses: ["external_robolectric_license"],
+}
+
+license {
+    name: "external_robolectric_license",
+    visibility: [":__subpackages__"],
+    license_kinds: [
+        "SPDX-license-identifier-MIT",
+        "SPDX-license-identifier-Apache-2.0",
+    ],
+    license_text: [
+        "LICENSE",
+        "NOTICE",
+    ],
+}
+
+java_import_host {
+    name: "Robolectric_annotations_upstream",
+    jars: ["share/robolectric/annotations-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_junit_upstream",
+    jars: ["share/robolectric/junit-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_pluginapi_upstream",
+    jars: ["share/robolectric/pluginapi-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_resources_upstream",
+    jars: ["share/robolectric/resources-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_sandbox_upstream",
+    jars: ["share/robolectric/sandbox-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_shadowapi_upstream",
+    jars: ["share/robolectric/shadowapi-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_utils_upstream",
+    jars: ["share/robolectric/utils-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_utils_reflector_upstream",
+    jars: ["share/robolectric/utils-reflector-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_nativeruntime_upstream",
+    jars: ["share/robolectric/nativeruntime-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_robolectric_upstream",
+    jars: ["share/robolectric/robolectric-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_shadows_framework_upstream",
+    jars: ["share/robolectric/shadows-framework-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_shadows_multidex_upstream",
+    jars: ["share/robolectric/shadows-multidex-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_shadows_httpclient_upstream",
+    jars: ["share/robolectric/shadows-httpclient-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "Robolectric_shadows_versioning_upstream",
+    jars: ["share/robolectric/shadows-versioning-4.11.1.jar"],
+    prefer: true,
+}
+
+java_import_host {
+    name: "libRobolectric_processor_upstream",
+    jars: ["share/robolectric/processor-4.11.1.jar"],
+    prefer: true,
+}
+
+java_plugin {
+    name: "Robolectric_processor_upstream",
+    static_libs: ["libRobolectric_processor_upstream"],
+}
+
+java_library_host {
+    name: "Robolectric_all_upstream",
+    static_libs: [
+        "Robolectric_shadows_httpclient_upstream",
+        "Robolectric_shadows_framework_upstream",
+        "Robolectric_shadows_multidex_upstream",
+        "Robolectric_shadows_versioning_upstream",
+        "Robolectric_robolectric_upstream",
+        "Robolectric_annotations_upstream",
+        "Robolectric_resources_upstream",
+        "Robolectric_shadowapi_upstream",
+        "Robolectric_sandbox_upstream",
+        "Robolectric_junit_upstream",
+        "Robolectric_utils_upstream",
+        "Robolectric_utils_reflector_upstream",
+        "Robolectric_nativeruntime_upstream",
+    ],
+}
+
+java_host_for_device {
+    name: "Robolectric_all-target_upstream",
+    libs: ["Robolectric_all_upstream"],
+}
+
+java_library_host {
+    name: "robolectric-host-android_all",
+    static_libs: [
+        "Robolectric_all_upstream",
+    ],
+}

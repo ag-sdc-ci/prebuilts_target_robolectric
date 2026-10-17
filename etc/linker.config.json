@@ -1,0 +1,9 @@
+{
+	"provideLibs": [	
+		    "libdummy_ext_robolectric-x86_64-v2.so",
+		    "libdummy_ext_robolectric.so",
+		    "libdummy_shared_robolectric-x86_64-v2.so",
+		    "libdummy_shared_robolectric.so"
+	],
+	"visible": true
+}
